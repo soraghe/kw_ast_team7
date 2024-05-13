@@ -1,0 +1,89 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\rktgk\\source\\repos\\LeftOrRightGame\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{1684447E-D8D7-4E20-82FF-027D6F70DAA5}|LeftOrRightGame\\LeftOrRightGame.csproj|c:\\users\\rktgk\\source\\repos\\leftorrightgame\\leftorrightgame\\form.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1684447E-D8D7-4E20-82FF-027D6F70DAA5}|LeftOrRightGame\\LeftOrRightGame.csproj|solutionrelative:leftorrightgame\\form.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1684447E-D8D7-4E20-82FF-027D6F70DAA5}|LeftOrRightGame\\LeftOrRightGame.csproj|C:\\Users\\rktgk\\source\\repos\\LeftOrRightGame\\leftorrightgame\\form.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{1684447E-D8D7-4E20-82FF-027D6F70DAA5}|LeftOrRightGame\\LeftOrRightGame.csproj|solutionrelative:leftorrightgame\\form.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1684447E-D8D7-4E20-82FF-027D6F70DAA5}|LeftOrRightGame\\LeftOrRightGame.csproj|C:\\Users\\rktgk\\source\\repos\\LeftOrRightGame\\leftorrightgame\\form.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1684447E-D8D7-4E20-82FF-027D6F70DAA5}|LeftOrRightGame\\LeftOrRightGame.csproj|solutionrelative:leftorrightgame\\form.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1684447E-D8D7-4E20-82FF-027D6F70DAA5}|LeftOrRightGame\\LeftOrRightGame.csproj|c:\\users\\rktgk\\source\\repos\\leftorrightgame\\leftorrightgame\\properties\\resources.resx||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{1684447E-D8D7-4E20-82FF-027D6F70DAA5}|LeftOrRightGame\\LeftOrRightGame.csproj|solutionrelative:leftorrightgame\\properties\\resources.resx||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Form.cs [\uB514\uC790\uC778]",
+              "DocumentMoniker": "C:\\Users\\rktgk\\source\\repos\\LeftOrRightGame\\LeftOrRightGame\\Form.cs",
+              "RelativeDocumentMoniker": "LeftOrRightGame\\Form.cs",
+              "ToolTip": "C:\\Users\\rktgk\\source\\repos\\LeftOrRightGame\\LeftOrRightGame\\Form.cs [\uB514\uC790\uC778]",
+              "RelativeToolTip": "LeftOrRightGame\\Form.cs [\uB514\uC790\uC778]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-05T03:54:37.409Z",
+              "IsPinned": true,
+              "EditorCaption": " [\uB514\uC790\uC778]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Form.cs",
+              "DocumentMoniker": "C:\\Users\\rktgk\\source\\repos\\LeftOrRightGame\\LeftOrRightGame\\Form.cs",
+              "RelativeDocumentMoniker": "LeftOrRightGame\\Form.cs",
+              "ToolTip": "C:\\Users\\rktgk\\source\\repos\\LeftOrRightGame\\LeftOrRightGame\\Form.cs",
+              "RelativeToolTip": "LeftOrRightGame\\Form.cs",
+              "ViewState": "AQIAABsAAAAAAAAAAAAIwC8AAAA1AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-11T00:55:23.594Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Resources.resx",
+              "DocumentMoniker": "C:\\Users\\rktgk\\source\\repos\\LeftOrRightGame\\LeftOrRightGame\\Properties\\Resources.resx",
+              "RelativeDocumentMoniker": "LeftOrRightGame\\Properties\\Resources.resx",
+              "ToolTip": "C:\\Users\\rktgk\\source\\repos\\LeftOrRightGame\\LeftOrRightGame\\Properties\\Resources.resx",
+              "RelativeToolTip": "LeftOrRightGame\\Properties\\Resources.resx",
+              "ViewState": "AQIAAGAAAAAAAAAAAAAmwGAAAAAdAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001005|",
+              "WhenOpened": "2024-05-12T16:26:43.626Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Form.Designer.cs",
+              "DocumentMoniker": "C:\\Users\\rktgk\\source\\repos\\LeftOrRightGame\\LeftOrRightGame\\Form.Designer.cs",
+              "RelativeDocumentMoniker": "LeftOrRightGame\\Form.Designer.cs",
+              "ToolTip": "C:\\Users\\rktgk\\source\\repos\\LeftOrRightGame\\LeftOrRightGame\\Form.Designer.cs",
+              "RelativeToolTip": "LeftOrRightGame\\Form.Designer.cs",
+              "ViewState": "AQIAAEcAAAAAAAAAAAD4v1AAAAAPAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-11T16:43:32.506Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

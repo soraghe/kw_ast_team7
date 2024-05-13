@@ -1,0 +1,10 @@
+C:\Users\rktgk\source\repos\LeftOrRightGame\LeftOrRightGame\obj\Debug\LeftOrRightGame.csproj.AssemblyReference.cache
+C:\Users\rktgk\source\repos\LeftOrRightGame\LeftOrRightGame\obj\Debug\LeftOrRightGame.csproj.GenerateResource.cache
+C:\Users\rktgk\source\repos\LeftOrRightGame\LeftOrRightGame\obj\Debug\LeftOrRightGame.Form.resources
+C:\Users\rktgk\source\repos\LeftOrRightGame\LeftOrRightGame\bin\Debug\LeftOrRightGame.exe.config
+C:\Users\rktgk\source\repos\LeftOrRightGame\LeftOrRightGame\bin\Debug\LeftOrRightGame.exe
+C:\Users\rktgk\source\repos\LeftOrRightGame\LeftOrRightGame\bin\Debug\LeftOrRightGame.pdb
+C:\Users\rktgk\source\repos\LeftOrRightGame\LeftOrRightGame\obj\Debug\LeftOrRightGame.Properties.Resources.resources
+C:\Users\rktgk\source\repos\LeftOrRightGame\LeftOrRightGame\obj\Debug\LeftOrRightGame.csproj.CoreCompileInputs.cache
+C:\Users\rktgk\source\repos\LeftOrRightGame\LeftOrRightGame\obj\Debug\LeftOrRightGame.exe
+C:\Users\rktgk\source\repos\LeftOrRightGame\LeftOrRightGame\obj\Debug\LeftOrRightGame.pdb
