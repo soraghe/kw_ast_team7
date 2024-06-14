@@ -11,8 +11,58 @@ using System.Windows.Forms;
 
 namespace sokoban
 {
+    
     public partial class Form1 : Form
     {
+        private System.Windows.Forms.Timer sokoTimer;
+        private int timeCount;
+
+        private void InitializesokoTimer()
+        {
+            sokoTimer = new System.Windows.Forms.Timer();
+            sokoTimer.Interval = 1000;
+            sokoTimer.Tick += new EventHandler(sokoTimer_Tick);
+        }
+        private void sokoTimer_Tick(object sender, EventArgs e)
+        {
+            if(timeCount>0)
+            {
+                timeCount--;
+                UpdateTimerLabel();
+            }
+            else
+            {
+                sokoTimer.Stop();
+                MessageBox.Show("예외 처리");
+            }
+        }
+
+        private void UpdateTimerLabel()
+        {
+            Text = Title + $"{timeCount}/300초 남았습니다.";
+            sokoTimerLabel.Text = $"{timeCount}/300초 남았습니다.";
+        }
+
+        private void StartTimer()
+        {
+            timeCount = 300;
+            UpdateTimerLabel() ;
+            sokoTimer.Start();
+        }
+        private void PauseTimer()
+        {
+            sokoTimer.Stop();
+        }
+        private void ResumeTimer()
+        {
+            sokoTimer.Start();
+        }
+        private void EndTimer()
+        {
+            sokoTimer.Stop();
+        }
+
+
         const int WTileSize = 16;
         const int HTileSize = 9;
         const string Title = "KWU 소코반 - I030-3-1234-01 : ";
@@ -114,13 +164,13 @@ namespace sokoban
                                 }
                                 };
 
-
+        
 
 
         public Form1()
         {
             InitializeComponent();
-
+            InitializesokoTimer();
             Text = Title;
             Stage = 0;
 
@@ -156,6 +206,7 @@ namespace sokoban
             }
             keyCount = 0;  // 성적처리? 
             Wooni = WooniFront;
+            StartTimer();
             Refresh();
         }
         private void Form1_Paint(object sender, PaintEventArgs e)
@@ -308,6 +359,10 @@ namespace sokoban
 
             }
 
+        }
+
+        private void sokoTimerTick(object sender, EventArgs e)
+        {
         }
     }
 }

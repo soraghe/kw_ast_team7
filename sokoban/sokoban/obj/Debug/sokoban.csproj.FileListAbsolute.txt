@@ -8,3 +8,13 @@ C:\Users\goflv\source\repos\sokoban\sokoban\obj\Debug\sokoban.csproj.CoreCompile
 C:\Users\goflv\source\repos\sokoban\sokoban\obj\Debug\sokoban.exe
 C:\Users\goflv\source\repos\sokoban\sokoban\obj\Debug\sokoban.pdb
 C:\Users\goflv\source\repos\sokoban\sokoban\obj\Debug\sokoban.Form1.resources
+C:\Users\goflv\jaeseong\sokoban\sokoban\bin\Debug\sokoban.exe.config
+C:\Users\goflv\jaeseong\sokoban\sokoban\bin\Debug\sokoban.exe
+C:\Users\goflv\jaeseong\sokoban\sokoban\bin\Debug\sokoban.pdb
+C:\Users\goflv\jaeseong\sokoban\sokoban\obj\Debug\sokoban.csproj.AssemblyReference.cache
+C:\Users\goflv\jaeseong\sokoban\sokoban\obj\Debug\sokoban.Form1.resources
+C:\Users\goflv\jaeseong\sokoban\sokoban\obj\Debug\sokoban.Properties.Resources.resources
+C:\Users\goflv\jaeseong\sokoban\sokoban\obj\Debug\sokoban.csproj.GenerateResource.cache
+C:\Users\goflv\jaeseong\sokoban\sokoban\obj\Debug\sokoban.csproj.CoreCompileInputs.cache
+C:\Users\goflv\jaeseong\sokoban\sokoban\obj\Debug\sokoban.exe
+C:\Users\goflv\jaeseong\sokoban\sokoban\obj\Debug\sokoban.pdb

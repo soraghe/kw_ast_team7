@@ -28,24 +28,47 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.sokoTimerLabel = new System.Windows.Forms.Label();
             this.SuspendLayout();
+            // 
+            // timer1
+            // 
+            this.timer1.Tick += new System.EventHandler(this.sokoTimerTick);
+            // 
+            // sokoTimerLabel
+            // 
+            this.sokoTimerLabel.AutoSize = true;
+            this.sokoTimerLabel.Location = new System.Drawing.Point(583, 126);
+            this.sokoTimerLabel.Name = "sokoTimerLabel";
+            this.sokoTimerLabel.Size = new System.Drawing.Size(171, 24);
+            this.sokoTimerLabel.TabIndex = 0;
+            this.sokoTimerLabel.Text = "sokoTimerLabel";
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(13F, 24F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(1486, 900);
+            this.Controls.Add(this.sokoTimerLabel);
             this.DoubleBuffered = true;
+            this.Margin = new System.Windows.Forms.Padding(6);
             this.Name = "Form1";
             this.Text = "Form1";
             this.Paint += new System.Windows.Forms.PaintEventHandler(this.Form1_Paint);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Form1_KeyDown);
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
+
+        private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.Label sokoTimerLabel;
+
     }
 }
 
