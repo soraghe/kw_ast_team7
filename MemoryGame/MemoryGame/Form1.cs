@@ -189,5 +189,10 @@ namespace MemoryGame
             gameOver = true;
             MessageBox.Show(msg);
         }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
