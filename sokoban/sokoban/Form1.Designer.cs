@@ -42,9 +42,8 @@
             this.sokoTimerLabel.AutoSize = true;
             this.sokoTimerLabel.Location = new System.Drawing.Point(583, 126);
             this.sokoTimerLabel.Name = "sokoTimerLabel";
-            this.sokoTimerLabel.Size = new System.Drawing.Size(171, 24);
+            this.sokoTimerLabel.Size = new System.Drawing.Size(0, 24);
             this.sokoTimerLabel.TabIndex = 0;
-            this.sokoTimerLabel.Text = "sokoTimerLabel";
             // 
             // Form1
             // 

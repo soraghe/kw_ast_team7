@@ -11,16 +11,16 @@
       "RelativeMoniker": "D:0:0:{89CCA122-AA06-48AD-9129-7C0CFAEBE69C}|sokoban\\sokoban.csproj|solutionrelative:sokoban\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{89CCA122-AA06-48AD-9129-7C0CFAEBE69C}|sokoban\\sokoban.csproj|c:\\users\\goflv\\jaeseong\\sokoban\\sokoban\\form1.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{89CCA122-AA06-48AD-9129-7C0CFAEBE69C}|sokoban\\sokoban.csproj|C:\\Users\\goflv\\jaeseong\\sokoban\\sokoban\\properties\\resources.resx||{FF4D6ACA-9352-4A5F-821E-F4D6EBDCAB11}",
+      "RelativeMoniker": "D:0:0:{89CCA122-AA06-48AD-9129-7C0CFAEBE69C}|sokoban\\sokoban.csproj|solutionrelative:sokoban\\properties\\resources.resx||{FF4D6ACA-9352-4A5F-821E-F4D6EBDCAB11}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{89CCA122-AA06-48AD-9129-7C0CFAEBE69C}|sokoban\\sokoban.csproj|C:\\Users\\goflv\\jaeseong\\sokoban\\sokoban\\form1.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{89CCA122-AA06-48AD-9129-7C0CFAEBE69C}|sokoban\\sokoban.csproj|solutionrelative:sokoban\\form1.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{89CCA122-AA06-48AD-9129-7C0CFAEBE69C}|sokoban\\sokoban.csproj|c:\\users\\goflv\\jaeseong\\sokoban\\sokoban\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{89CCA122-AA06-48AD-9129-7C0CFAEBE69C}|sokoban\\sokoban.csproj|C:\\Users\\goflv\\jaeseong\\sokoban\\sokoban\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{89CCA122-AA06-48AD-9129-7C0CFAEBE69C}|sokoban\\sokoban.csproj|solutionrelative:sokoban\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{89CCA122-AA06-48AD-9129-7C0CFAEBE69C}|sokoban\\sokoban.csproj|C:\\Users\\goflv\\jaeseong\\sokoban\\sokoban\\properties\\resources.resx||{FF4D6ACA-9352-4A5F-821E-F4D6EBDCAB11}",
-      "RelativeMoniker": "D:0:0:{89CCA122-AA06-48AD-9129-7C0CFAEBE69C}|sokoban\\sokoban.csproj|solutionrelative:sokoban\\properties\\resources.resx||{FF4D6ACA-9352-4A5F-821E-F4D6EBDCAB11}"
     }
   ],
   "DocumentGroupContainers": [
@@ -34,7 +34,7 @@
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "Form1.Designer.cs",
               "DocumentMoniker": "C:\\Users\\goflv\\jaeseong\\sokoban\\sokoban\\Form1.Designer.cs",
               "RelativeDocumentMoniker": "sokoban\\Form1.Designer.cs",
@@ -47,7 +47,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\goflv\\jaeseong\\sokoban\\sokoban\\Program.cs",
               "RelativeDocumentMoniker": "sokoban\\Program.cs",
@@ -55,8 +55,7 @@
               "RelativeToolTip": "sokoban\\Program.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-14T12:10:52.202Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-14T12:10:52.202Z"
             },
             {
               "$type": "Document",
@@ -66,14 +65,14 @@
               "RelativeDocumentMoniker": "sokoban\\Form1.cs",
               "ToolTip": "C:\\Users\\goflv\\jaeseong\\sokoban\\sokoban\\Form1.cs",
               "RelativeToolTip": "sokoban\\Form1.cs",
-              "ViewState": "AQIAAB0AAAAAAAAAAAAQwCkAAAA2AAAA",
+              "ViewState": "AQIAAJIAAAAAAAAAAAAswKoAAAAIAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-05-08T14:59:21.214Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 2,
               "Title": "Resources.resx",
               "DocumentMoniker": "C:\\Users\\goflv\\jaeseong\\sokoban\\sokoban\\Properties\\Resources.resx",
               "RelativeDocumentMoniker": "sokoban\\Properties\\Resources.resx",

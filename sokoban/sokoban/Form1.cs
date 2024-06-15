@@ -40,7 +40,7 @@ namespace sokoban
         private void UpdateTimerLabel()
         {
             Text = Title + $"{timeCount}/300초 남았습니다.";
-            sokoTimerLabel.Text = $"{timeCount}/300초 남았습니다.";
+            //sokoTimerLabel.Text = $"{timeCount}/300초 남았습니다.";
         }
 
         private void StartTimer()
@@ -61,6 +61,10 @@ namespace sokoban
         {
             sokoTimer.Stop();
         }
+        private Stack<Tuple<int, int, int, int, Image>> undoStack = new Stack<Tuple<int, int, int, int, Image>>();
+        private Stack<Tuple<int, int, int, int, Image>> redoStack = new Stack<Tuple<int, int, int, int, Image>>();
+
+        // undo, redo 구현 용 스택
 
 
         const int WTileSize = 16;
@@ -269,6 +273,8 @@ namespace sokoban
                 MapReal[YWooni * 2 - YWooniOld][XWooni * 2 - XWooniOld] = 'B'; 
             }
 
+            undoStack.Push(Tuple.Create(YWooniOld, XWooniOld, YWooni, XWooni,Wooni));
+            redoStack.Clear();
 
             if ('.' == Map[Stage, YWooniOld][XWooniOld])    
             {
@@ -313,6 +319,14 @@ namespace sokoban
                     ++YWooni;
                     Wooni = WooniFront;
                     break;
+                case Keys.Z:
+                    if (e.Control) Undo();
+                    return;
+                case Keys.Y:
+                    if (e.Control) Redo();
+                    return;
+
+
                     /* 언도 / 레도 구현해야함! 
                      * 
                      * 
@@ -360,6 +374,42 @@ namespace sokoban
             }
 
         }
+
+       private void Undo()
+        {
+            if (undoStack.Count > 0)
+            {
+                var lastMove = undoStack.Pop();
+                redoStack.Push(Tuple.Create(lastMove.Item3, lastMove.Item4, YWooni, XWooni, Wooni));  // 현재 위치와 되돌릴 위치 저장
+
+                MapReal[YWooni][XWooni] = Map[Stage, YWooni][XWooni] == '.' ? '.' : ' ';
+                YWooni = lastMove.Item1;
+                XWooni = lastMove.Item2;
+                Wooni = lastMove.Item5;
+                MapReal[YWooni][XWooni] = '@';
+
+                Refresh();
+            }
+        }
+
+        private void Redo()
+        {
+            if (redoStack.Count > 0)
+            {
+                var nextMove = redoStack.Pop();
+                undoStack.Push(Tuple.Create(nextMove.Item3, nextMove.Item4, YWooni, XWooni, Wooni));  // 현재 위치와 되돌릴 위치 저장
+
+                MapReal[YWooni][XWooni] = Map[Stage, YWooni][XWooni] == '.' ? '.' : ' ';
+                YWooni = nextMove.Item1;
+                XWooni = nextMove.Item2;
+                Wooni = nextMove.Item5;
+                MapReal[YWooni][XWooni] = '@';
+
+                Refresh();
+            }
+        }
+
+
 
         private void sokoTimerTick(object sender, EventArgs e)
         {
