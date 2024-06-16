@@ -1,0 +1,141 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{9FB717F8-B41C-460D-9F83-98DF68343466}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>ESCAPE_project</RootNamespace>
+    <AssemblyName>ESCAPE_project</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Description.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Description.Designer.cs">
+      <DependentUpon>Description.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Main.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main.Designer.cs">
+      <DependentUpon>Main.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Description.resx">
+      <DependentUpon>Description.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main.resx">
+      <DependentUpon>Main.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pj_startpage.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pj_mainpage.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\_fast.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\_focus.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\_memory.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\_solve.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\CatchDigda\CatchDigda.csproj">
+      <Project>{5f6fbe8a-72e1-4eaa-8838-d706f5f9a073}</Project>
+      <Name>CatchDigda</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\LeftOrRightGame\LeftOrRightGame\LeftOrRightGame.csproj">
+      <Project>{1684447e-d8d7-4e20-82ff-027d6f70daa5}</Project>
+      <Name>LeftOrRightGame</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MemoryGame\MemoryGame\MemoryGame.csproj">
+      <Project>{a010ab74-1ba5-4507-bd57-22f1ebee0224}</Project>
+      <Name>MemoryGame</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\sokoban\sokoban\sokoban.csproj">
+      <Project>{89cca122-aa06-48ad-9129-7c0cfaebe69c}</Project>
+      <Name>sokoban</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pj_description.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pj_fail.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pj_pass.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
