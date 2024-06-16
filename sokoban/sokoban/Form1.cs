@@ -16,7 +16,15 @@ namespace sokoban
     {
         private System.Windows.Forms.Timer sokoTimer;
         private int timeCount;
+        private DateTime stageStartTime;
+        private int totalScore;
+        private bool[] stageCleared;
+        private int[] remainingTimes;
 
+        private bool isMainScreen = true;
+        private Image mainScreenImage;
+
+        
         private void InitializesokoTimer()
         {
             sokoTimer = new System.Windows.Forms.Timer();
@@ -39,13 +47,22 @@ namespace sokoban
 
         private void UpdateTimerLabel()
         {
-            Text = Title + $"{timeCount}/300초 남았습니다.";
-            //sokoTimerLabel.Text = $"{timeCount}/300초 남았습니다.";
+            if(isMainScreen)
+            {
+                Text = Title + "시작하려면 N키를 누르세요...";
+
+            }
+            else
+            {
+                Text = Title + $"{timeCount}/300초 남았습니다. 현재 점수 : {totalScore}";
+                //sokoTimerLabel.Text = $"{timeCount}/300초 남았습니다.";
+            }
         }
 
         private void StartTimer()
         {
             timeCount = 300;
+            stageStartTime = DateTime.Now;
             UpdateTimerLabel() ;
             sokoTimer.Start();
         }
@@ -61,8 +78,8 @@ namespace sokoban
         {
             sokoTimer.Stop();
         }
-        private Stack<Tuple<int, int, int, int, Image>> undoStack = new Stack<Tuple<int, int, int, int, Image>>();
-        private Stack<Tuple<int, int, int, int, Image>> redoStack = new Stack<Tuple<int, int, int, int, Image>>();
+        private Stack<Tuple<int, int, int, int, int, int, Image>> undoStack = new Stack<Tuple<int, int, int, int, int, int, Image>>();
+        private Stack<Tuple<int, int, int, int, int, int, Image>> redoStack = new Stack<Tuple<int, int, int, int, int, int, Image>>();
 
         // undo, redo 구현 용 스택
 
@@ -99,6 +116,9 @@ namespace sokoban
         int YWooni;
         int XWooniOld;
         int YWooniOld;
+
+        int XBlockOld;
+        int YBlockOld;
 
         char[][] MapReal;
 
@@ -167,8 +187,7 @@ namespace sokoban
                                  "################"
                                 }
                                 };
-
-        
+        int[] stageScores = { 0, 10, 15, 20, 25, 30 }; 
 
 
         public Form1()
@@ -198,6 +217,15 @@ namespace sokoban
             XWooni = 0;
             YWooni = 0;
 
+            mainScreenImage = new Bitmap(Properties.Resources.mainImage);
+            stageCleared = new bool[stageScores.Length];
+            remainingTimes = new int[stageScores.Length];
+
+            for (int i = 0; i < stageCleared.Length; i++)
+            {
+                stageCleared[i] = false;
+            }
+
             LoadMap();
         }
 
@@ -215,6 +243,11 @@ namespace sokoban
         }
         private void Form1_Paint(object sender, PaintEventArgs e)
         {
+            if(isMainScreen)
+            {
+                e.Graphics.DrawImage(mainScreenImage, 0, 0, ClientSize.Width, ClientSize.Height);
+                return;
+            }
             EndGame = true;  
             Image Temp = Dirt;
             for (int j = 0; j < HTileSize; ++j)
@@ -270,10 +303,14 @@ namespace sokoban
                 {
                     return;   
                 }
+                undoStack.Push(Tuple.Create(YWooniOld, XWooniOld, YWooni, XWooni, XWooni * 2 - XWooniOld, YWooni * 2 - YWooniOld, Wooni));
                 MapReal[YWooni * 2 - YWooniOld][XWooni * 2 - XWooniOld] = 'B'; 
             }
+            else
+            {
+                undoStack.Push(Tuple.Create(YWooniOld, XWooniOld, YWooni, XWooni, -1, -1, Wooni));
+            }
 
-            undoStack.Push(Tuple.Create(YWooniOld, XWooniOld, YWooni, XWooni,Wooni));
             redoStack.Clear();
 
             if ('.' == Map[Stage, YWooniOld][XWooniOld])    
@@ -294,7 +331,32 @@ namespace sokoban
         {
             YWooniOld = YWooni;
             XWooniOld = XWooni;
-            
+            if(isMainScreen && e.KeyCode == Keys.N)
+            {
+                isMainScreen = false;
+                Refresh();
+                return;
+            }
+            if (e.KeyCode == Keys.N)
+            {
+                if (Stage < stageScores.Length-1)
+                {
+                    SaveRemainingTime();
+                    Stage++;
+                    LoadMap();
+                }
+                return;
+            }
+            if (e.KeyCode == Keys.P)
+            {
+                if (Stage > 0)
+                {
+                    SaveRemainingTime();
+                    Stage--;
+                    LoadMap();
+                }
+                return;
+            }
             switch (e.KeyCode)
             {
                 case Keys.F5:        //테스트용 
@@ -327,10 +389,6 @@ namespace sokoban
                     return;
 
 
-                    /* 언도 / 레도 구현해야함! 
-                     * 
-                     * 
-                     */
                 default:              // 나머지 키 입력 무시 
                     return;
             }
@@ -338,57 +396,74 @@ namespace sokoban
             Refresh();  
             if (EndGame == true)  // 여기에 메인과 연결 예정
             {
-                ++Stage; // OT + 1번째 과제 + 2번째 과제 + 중간고사 + 3번째 과제 + 기말고사, -> 포기하면 학점 깎인다. 걸린 시간에 따라서 0 부여 예정
-                switch (Stage)
+                double elapsedTime = (DateTime.Now - stageStartTime).TotalSeconds; // 라운드를 완료하는 시간 측정
+                double percentage = Math.Max(0, Math.Min(1, (300 - elapsedTime) / 300)); // 백분율 계산
+                int stageScore = (int)(stageScores[Stage] * percentage); // 백분율을 바탕으로 점수 계산
+                totalScore += stageScore; // 총점에 추가
+                stageCleared[Stage] = true; // 현재 스테이지를 클리어로 표시
+                remainingTimes[Stage] = timeCount; // 남은 시간을 저장
+                MessageBox.Show($"라운드 완료! 획득 점수: {stageScore}, 총 점수: {totalScore}", "결과", MessageBoxButtons.OK);
+
+
+
+
+                if (Stage < stageScores.Length - 1)
                 {
-                    case 1:
-                        MessageBox.Show("1번째 과제단계로 갑니다.", "조교로부터의 메시지", MessageBoxButtons.OK);
-
-                        MessageBox.Show("고생하셨어요. 당신의 최종 성적은 " + finalGrade + finalGradeNumber + "입니다.", "조교로부터의 메시지", MessageBoxButtons.OK);
-
-                        break;
-                    case 2:
-                        MessageBox.Show("이제 2번째 과제단계로 갑니다.", "조교로부터의 메시지", MessageBoxButtons.OK);
-                        break;
-
-                    case 3:
-                        MessageBox.Show("잘하셨어요. 중간고사를 치루어봅시다.", "조교로부터의 메시지", MessageBoxButtons.OK);
-                        break;
-
-                    case 4:
-                        MessageBox.Show("어느덧 마지막 과제에요!", "조교로부터의 메시지", MessageBoxButtons.OK);
-                        break;
-
-                    case 5:
-                        MessageBox.Show("대망의 기말고사입니다. 화이팅! ", "조교로부터의 메시지", MessageBoxButtons.OK);
-                        break;
+                    Stage++;
                 }
-                if (Stage == 6)   // 
+                else
                 {
-                    MessageBox.Show("고생하셨어요. 당신의 최종 성적은 "+ finalGrade + finalGradeNumber + "입니다.", "조교로부터의 메시지", MessageBoxButtons.OK); //메시지 세분화?
-                    Environment.Exit(0);
+                    bool allCleared = stageCleared.Skip(1).All(cleared => cleared); // 첫 번째 스테이지 제외
+                    if (!allCleared)
+                    {
+                        DialogResult result = MessageBox.Show("모든 라운드를 클리어하지 못했습니다. 게임을 끝낼까요?", "경고", MessageBoxButtons.YesNo);
+                        if (result == DialogResult.Yes)
+                        {
+                            double finalPercentage = (double)totalScore / stageScores.Skip(1).Sum() * 100; // 첫 번째 스테이지 제외하고 계산
+                            MessageBox.Show($"고생하셨어요. 당신의 최종 점수는 {finalPercentage:F2}점입니다.", "최종 성적", MessageBoxButtons.OK);
+                            Environment.Exit(0);
+                        }
+                        else
+                        {
+                            return; // 게임을 계속합니다.
+                        }
+                    }
+                    else
+                    {
+                        double finalPercentage = (double)totalScore / stageScores.Skip(1).Sum() * 100; // 첫 번째 스테이지 제외하고 계산
+                        MessageBox.Show($"고생하셨어요. 당신의 최종 점수는 {finalPercentage:F2}점입니다.", "최종 성적", MessageBoxButtons.OK);
+                        Environment.Exit(0);
+                    }
                 }
-                
                 LoadMap();
-
             }
 
         }
+        private void SaveRemainingTime()
+        {
+            remainingTimes[Stage] = timeCount;
+        }
 
-       private void Undo()
+        private void Undo()
         {
             if (undoStack.Count > 0)
             {
                 var lastMove = undoStack.Pop();
-                redoStack.Push(Tuple.Create(lastMove.Item3, lastMove.Item4, YWooni, XWooni, Wooni));  // 현재 위치와 되돌릴 위치 저장
+                redoStack.Push(Tuple.Create(YWooni, XWooni, lastMove.Item1, lastMove.Item2, lastMove.Item3, lastMove.Item4, Wooni));
 
                 MapReal[YWooni][XWooni] = Map[Stage, YWooni][XWooni] == '.' ? '.' : ' ';
+                if (lastMove.Item5 != -1 && lastMove.Item6 != -1)
+                {
+                    MapReal[lastMove.Item3][lastMove.Item4] = 'B';
+                    MapReal[lastMove.Item5][lastMove.Item6] = ' ';
+                }
                 YWooni = lastMove.Item1;
                 XWooni = lastMove.Item2;
-                Wooni = lastMove.Item5;
+                Wooni = lastMove.Item7;
                 MapReal[YWooni][XWooni] = '@';
 
                 Refresh();
+
             }
         }
 
@@ -397,12 +472,17 @@ namespace sokoban
             if (redoStack.Count > 0)
             {
                 var nextMove = redoStack.Pop();
-                undoStack.Push(Tuple.Create(nextMove.Item3, nextMove.Item4, YWooni, XWooni, Wooni));  // 현재 위치와 되돌릴 위치 저장
+                undoStack.Push(Tuple.Create(YWooni, XWooni, nextMove.Item1, nextMove.Item2, nextMove.Item3, nextMove.Item4, Wooni));
 
                 MapReal[YWooni][XWooni] = Map[Stage, YWooni][XWooni] == '.' ? '.' : ' ';
+                if (nextMove.Item5 != -1 && nextMove.Item6 != -1)
+                {
+                    MapReal[nextMove.Item3][nextMove.Item4] = 'B';
+                    MapReal[nextMove.Item5][nextMove.Item6] = ' ';
+                }
                 YWooni = nextMove.Item1;
                 XWooni = nextMove.Item2;
-                Wooni = nextMove.Item5;
+                Wooni = nextMove.Item7;
                 MapReal[YWooni][XWooni] = '@';
 
                 Refresh();
