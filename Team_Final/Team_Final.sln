@@ -5,9 +5,9 @@ VisualStudioVersion = 17.6.33829.357
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Team_Final", "Team_Final\Team_Final.csproj", "{57BC6F7B-7217-4A20-BD0B-34B8345581A3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MemoryGame", "..\MemoryGame\MemoryGame\MemoryGame.csproj", "{A010AB74-1BA5-4507-BD57-22F1EBEE0224}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MemoryGame", "..\..\MemoryGame\MemoryGame\MemoryGame.csproj", "{A010AB74-1BA5-4507-BD57-22F1EBEE0224}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CatchDigda", "..\CatchDigda\CatchDigda.csproj", "{5F6FBE8A-72E1-4EAA-8838-D706F5F9A073}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CatchDigda", "..\..\CatchDigda\kw_ast_team7-tww\CatchDigda.csproj", "{5F6FBE8A-72E1-4EAA-8838-D706F5F9A073}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

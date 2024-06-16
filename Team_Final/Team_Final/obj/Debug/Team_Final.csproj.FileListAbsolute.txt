@@ -29,3 +29,25 @@ C:\C#project(3-1)\새빛탈출 프로젝트\Team_Final\Team_Final\obj\Debug\Team
 C:\C#project(3-1)\새빛탈출 프로젝트\Team_Final\Team_Final\bin\Debug\CatchDigda.exe
 C:\C#project(3-1)\새빛탈출 프로젝트\Team_Final\Team_Final\bin\Debug\CatchDigda.pdb
 C:\C#project(3-1)\새빛탈출 프로젝트\Team_Final\Team_Final\bin\Debug\CatchDigda.exe.config
+<<<<<<< HEAD
+C:\C#project(3-1)\TeamProject\Team_Final\Team_Final\bin\Debug\Team_Final.exe.config
+C:\C#project(3-1)\TeamProject\Team_Final\Team_Final\bin\Debug\Team_Final.exe
+C:\C#project(3-1)\TeamProject\Team_Final\Team_Final\bin\Debug\Team_Final.pdb
+C:\C#project(3-1)\TeamProject\Team_Final\Team_Final\bin\Debug\CatchDigda.exe
+C:\C#project(3-1)\TeamProject\Team_Final\Team_Final\bin\Debug\MemoryGame.exe
+C:\C#project(3-1)\TeamProject\Team_Final\Team_Final\bin\Debug\CatchDigda.pdb
+C:\C#project(3-1)\TeamProject\Team_Final\Team_Final\bin\Debug\CatchDigda.exe.config
+C:\C#project(3-1)\TeamProject\Team_Final\Team_Final\bin\Debug\MemoryGame.pdb
+C:\C#project(3-1)\TeamProject\Team_Final\Team_Final\bin\Debug\MemoryGame.exe.config
+C:\C#project(3-1)\TeamProject\Team_Final\Team_Final\obj\Debug\Team_Final.csproj.AssemblyReference.cache
+C:\C#project(3-1)\TeamProject\Team_Final\Team_Final\obj\Debug\Team_Final.csproj.SuggestedBindingRedirects.cache
+C:\C#project(3-1)\TeamProject\Team_Final\Team_Final\obj\Debug\Team_Final.Form1.resources
+C:\C#project(3-1)\TeamProject\Team_Final\Team_Final\obj\Debug\Team_Final.Form2.resources
+C:\C#project(3-1)\TeamProject\Team_Final\Team_Final\obj\Debug\Team_Final.Properties.Resources.resources
+C:\C#project(3-1)\TeamProject\Team_Final\Team_Final\obj\Debug\Team_Final.csproj.GenerateResource.cache
+C:\C#project(3-1)\TeamProject\Team_Final\Team_Final\obj\Debug\Team_Final.csproj.CoreCompileInputs.cache
+C:\C#project(3-1)\TeamProject\Team_Final\Team_Final\obj\Debug\Team_Final.csproj.CopyComplete
+C:\C#project(3-1)\TeamProject\Team_Final\Team_Final\obj\Debug\Team_Final.exe
+C:\C#project(3-1)\TeamProject\Team_Final\Team_Final\obj\Debug\Team_Final.pdb
+=======
+>>>>>>> 4e0282a35ad0cf9d359dfbeba4a5226c002befdf
