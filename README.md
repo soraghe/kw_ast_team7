@@ -43,7 +43,3 @@
 
 ----
 
-### *** 노션 ***
-
-<https://www.notion.so/TEAM-8f6dd9a2879e4d6fa35943e667b4f9ea?pvs=4>
-
