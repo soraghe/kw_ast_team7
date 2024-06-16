@@ -1,0 +1,57 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\Code\\CSharp\\CatchDigda\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{5F6FBE8A-72E1-4EAA-8838-D706F5F9A073}|CatchDigda.csproj|d:\\code\\csharp\\catchdigda\\digda.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5F6FBE8A-72E1-4EAA-8838-D706F5F9A073}|CatchDigda.csproj|solutionrelative:digda.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5F6FBE8A-72E1-4EAA-8838-D706F5F9A073}|CatchDigda.csproj|D:\\Code\\CSharp\\CatchDigda\\digda.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{5F6FBE8A-72E1-4EAA-8838-D706F5F9A073}|CatchDigda.csproj|solutionrelative:digda.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 2,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{b1e99781-ab81-11d0-b683-00aa00a3ee26}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Digda.cs [\uB514\uC790\uC778]",
+              "DocumentMoniker": "D:\\Code\\CSharp\\CatchDigda\\Digda.cs",
+              "RelativeDocumentMoniker": "Digda.cs",
+              "ToolTip": "D:\\Code\\CSharp\\CatchDigda\\Digda.cs [\uB514\uC790\uC778]",
+              "RelativeToolTip": "Digda.cs [\uB514\uC790\uC778]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-26T03:33:11.629Z",
+              "EditorCaption": " [\uB514\uC790\uC778]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Digda.cs",
+              "DocumentMoniker": "D:\\Code\\CSharp\\CatchDigda\\Digda.cs",
+              "RelativeDocumentMoniker": "Digda.cs",
+              "ToolTip": "D:\\Code\\CSharp\\CatchDigda\\Digda.cs",
+              "RelativeToolTip": "Digda.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABoAAABHAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-26T04:03:16.991Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
